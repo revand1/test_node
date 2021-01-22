@@ -50,7 +50,7 @@ app.get('/',(req,res)=>{
       
 
      },
-     body: JSON.stringify({"query":"query {\n post(id: 27) {\n id\n title\n body\n }\n}"})
+     body: JSON.stringify({"query":"query {\n post(id: 27) {S\n title\n body\n }\n}"})
 
  })
  .then(result => {
