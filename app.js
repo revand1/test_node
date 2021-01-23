@@ -9,6 +9,8 @@ app.use(express.json());
 
 
 app.post('/',(req,res)=>{
+  if(req.body.user.username=='admin'&&req.body.user.password=='admin')
+  {
     let id = req.body.post.id;
     console.log(id);
    fetch("https://graphqlzero.almansi.me/api",{
@@ -34,6 +36,11 @@ app.post('/',(req,res)=>{
     console.log("data returned:\n", data);
     res.send(data);
   });
+}
+else
+{
+  res.send('Invalid Credentials');
+}
 });
 
 app.get('/',(req,res)=>{
