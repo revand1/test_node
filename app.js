@@ -39,7 +39,7 @@ app.post('/',(req,res)=>{
 }
 else
 {
-  res.send('Invalid Credentials');
+  res.send({"Error":"Invalid Credentials"});
 }
 });
 
